@@ -6,10 +6,12 @@ export default createGlobalStyle`
     padding:0;
     box-sizing: border-box;
     outline: 0;
+   
 }
 
 body, input, button {
     font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
 }
 
 button {
@@ -24,6 +26,7 @@ a {
     --color-primary: #ff577f;
     --color-primary-focus: #ff427f;
     --color-primary-negative: #59323f;
+    --Grey-100: #000000;
     --Grey-4: #121214;
     --Grey-3: #212529;
     --Grey-2: #343b41;
@@ -39,7 +42,12 @@ a {
 
     --radius-inputs-buttons: 0.3rem;
     --border: 0.1rem;
-    
+    --box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
 
+    --container-size: 1200px;
 }
 `;
+
+export const colorPrimary= "#ff577f";
+export const colorPrimaryFocus= "#ff427f";
+export const colorPrimaryNegative= "#59323f";
