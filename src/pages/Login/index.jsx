@@ -3,9 +3,13 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { colorPrimary } from "../../styles/global";
 
+import { toast } from "react-toastify"
+
 import{ useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+import api from "../../services/api"
 
 const Login = () => {
     const schema = yup.object().shape({
@@ -21,7 +25,22 @@ const Login = () => {
         resolver: yupResolver(schema),
     });
 
-    const handleLogin = (data) => console.log(data);
+    const handleLogin = async (data) => {
+        const response = await api
+            .post("/sessions/", data)
+            .cath((err) =>{ 
+                console.log(err);  
+                toast.error("Ops! algo de errado não está certo");
+            }
+        );
+
+        const {token} = response.data;
+        console.log(token);
+
+        localStorage.setItem("@KenzieHub:token", token);
+
+        
+    };
 
     return (
         <Container>
