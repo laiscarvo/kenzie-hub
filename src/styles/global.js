@@ -46,6 +46,14 @@ a {
 
     --container-size: 1200px;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--Grey-2) inset !important;
+}
+
 `;
 
 export const colorPrimary= "#ff577f";

@@ -4,6 +4,8 @@ import * as yup from "yup";
 
 import api from "../../services/api"
 
+import { useHistory } from "react-router-dom";
+
 import { toast } from "react-toastify";
 
 import { Container, Form } from "./style";
@@ -44,21 +46,23 @@ const Signup = () => {
     } = useForm({
         resolver: yupResolver(signupSchema)
     })
-
     console.log(errors)
 
+    const history = useHistory();
+
     const handleCreateUser = async (data) => {
+        console.log(data)
         delete data.confirm_password;
 
         const response = await api
-            .post("/users/", data)
-            .cath((err) => {
+            .post("/users", data)
+            .catch((err) => {
                 console.log(err);
                 toast.error("Ops! algo de errado não está certo");
             });
         console.log(response.data)
         toast.success('Conta cadastrada com sucesso!');
-
+        history.push('/')
     } 
 
     return(
@@ -117,8 +121,9 @@ const Signup = () => {
                 <p>{errors.course_module?.message}</p>
                 <Button 
                     backgroundColor={colorPrimary}
-                    type="submit"> 
-                        Cadastrar 
+                    type="submit"
+                > 
+                    Cadastrar 
                 </Button>
             </Form>
         </Container>   

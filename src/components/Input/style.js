@@ -42,6 +42,25 @@ export const InputContainer = styled.div`
         
             color: var(--Grey-1);
         }
-
     }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px var(--Grey-2) inset !important;
+    }
+
+    /* input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--Grey-1);
+        -webkit-background-color: var(--Grey-2) !important;
+        -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+        transition: background-color var(--Grey-2)  5000s ease-in-out 0s;
+    } */
+
 `
+    

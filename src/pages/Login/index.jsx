@@ -5,13 +5,15 @@ import { colorPrimary } from "../../styles/global";
 
 import { toast } from "react-toastify"
 
+import { useHistory } from "react-router-dom";
 import{ useForm } from "react-hook-form";
+import { Redirect } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import api from "../../services/api"
 
-const Login = () => {
+const Login = ({ auth, setAuth }) => {
     const schema = yup.object().shape({
         email: yup.string().required("Campo obrigatório").email("Email inválido"),
         password: yup.string().required("Campo obrigatório"),
@@ -25,19 +27,28 @@ const Login = () => {
         resolver: yupResolver(schema),
     });
 
-    const handleLogin = async (data) => {
-        const response = await api
-            .post("/sessions/", data)
-            .cath((err) =>{ 
-                console.log(err);  
-                toast.error("Ops! algo de errado não está certo");
-            }
-        );
+    const history = useHistory();
 
-        const {token} = response.data;
-        console.log(token);
+    if(auth) {
+        return <Redirect to="/dashboard"/>;
+    }
+
+    const handleLogin = async (data) => {
+        const response = await api.post("/sessions/", data).catch((err) => { 
+                console.log(err);  
+                toast.error("Ops! algo não está certo");
+        });
+
+        const { user, token } = response.data;
 
         localStorage.setItem("@KenzieHub:token", token);
+        localStorage.setItem("@KenzieHub:id", JSON.stringify(user.id));
+        localStorage.setItem("@KenzieHub:user", JSON.stringify(user));
+
+        toast.success("Login feito");
+
+        setAuth(true)
+        history.push("/dashboard")
 
         
     };
@@ -66,7 +77,7 @@ const Login = () => {
                 <strong>Ainda não possui uma conta?</strong>
                 </ContainerMessage> 
 
-                <Button type="button">Cadastre-se</Button>
+                <Button onClick={ () => history.push('/signup')} type="button">Cadastre-se</Button>
             </Form>
         </Container>
     )

@@ -26,4 +26,24 @@ export const Form = styled.form`
         margin-top: 8px;
         margin-bottom: 8px;
     }
+    select {
+        height: 45px;
+
+        padding: 0 .6rem;
+
+        transition: .5s;
+        border: 1.5px solid var(--Grey-2);
+        border-radius: 4px;
+        background: var(--Grey-2);
+        color: var(--Grey-1);
+        
+        &::placeholder {
+        
+            color: var(--Grey-1);
+        }
+
+        :focus-within {
+            border: 1.5px solid var(--Grey-0) ;
+        }
+    }
 `
