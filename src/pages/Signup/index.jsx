@@ -90,6 +90,7 @@ const Signup = () => {
           register={register}
           name="confirm_password"
           label="Confirmar senha"
+          type="password"
           placeholder="Digite novamente sua senha"
           error={errors.confirm_password?.message}
         />
