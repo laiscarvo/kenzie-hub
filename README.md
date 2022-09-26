@@ -1,72 +1,54 @@
 ![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
-# Getting Started with Create React App
+# 🏁 KenzieHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição do Projeto
 
-## Available Scripts
+Kenziehub é um hub de portfólios de programadores da Kenzie! O objetivo dessa aplicação é conseguir criar um frontend de qualidade, utilizando o que foi ensinado, até o momento, no curso.
 
-In the project directory, you can run:
+Nesta aplicação o usuário poderá se cadastrar, adicionar as tecnologias que ele aprendeu e está aprendendo, assim como seus trabalhos realizados.
+
+<img src="https://conteudo-kenzie-fullstack.vercel.app/modulo_3/entregas/entrega_kenzie_hub/img/entrega_kenziehub_atualizada.png" alt="Imagem da Hamburgueria" width="50%">
+
+## ✔️ Técnicas e tecnologias utilizadas
+
+- `CSS`
+- `JavaScript`
+- `React`
+
+## 📁 Acesso ao projeto
+
+[Veja o projeto final do curso em funcionamento](https://react-entrega-s2-kenzie-hub-laiscarvo-1ky9kcskj-laiscarvo.vercel.app/).
+
+Neste repositório você tem acesso a todo o material produzido.
+
+# 🛠️ Abrir e rodar o projeto
+
+## Scripts disponíveis
+
+No diretorio do projeto, você pode rodar:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Execute o app no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A página será recarregada quando você fizer alterações.\
+Você também pode ver erros no console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia o executor de teste no modo de exibição interativa.\
+Consulte a seção sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para obter mais informações.
 
-### `yarn build`
+## Saiba mais
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Você pode aprender mais na [documentação Criar aplicativo React](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para aprender o React, confira a [documentação do React](https://reactjs.org/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Autores
 
-### `yarn eject`
+| [<img src="https://avatars.githubusercontent.com/u/99590932?v=4" width=115><br><sub>Lais Carvalho de Oliveira</sub>](https://github.com/laiscarvo)
+| :---: |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
